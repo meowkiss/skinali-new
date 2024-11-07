@@ -1,0 +1,55 @@
+        .advanteges {
+            &-wrapp {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        
+        .advantege {
+            &-item {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                height: 165px;
+                max-width: 310px;
+                text-align: center;
+                flex-basis: 33.333%;
+                margin-bottom: 110px;
+                align-items: center;
+                justify-content: end;
+                &__img {}
+                &__text {
+                    margin-top: 35px;
+                    font-size: 20px;
+                }
+            }
+        }
+        
+        // media-width
+        @media (max-width:1180px) {}
+        
+        @media (max-width: 991px) {
+            .advanteges {
+                &-wrapp {
+                    justify-content: space-evenly;
+                }
+            }
+            .advantege {
+                &-item {
+                    flex-basis: 50%;
+                }
+            }
+        }
+        
+        @media (max-width:767px) {}
+        
+        @media (max-width: 576px) {
+            .advantege {
+                &-item {
+                    flex-basis: 100%;
+                    margin-bottom: 60px;
+                }
+            }
+        }
