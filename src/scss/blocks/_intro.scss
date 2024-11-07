@@ -1,0 +1,69 @@
+.intro {
+    background: url('../../img/intro__bacground.jpg') center top /cover no-repeat;
+    &__block {
+        background-color: $secondary-bg;
+        margin-top: 85px;
+    }
+    &__wrapper {
+        max-width: 285px;
+        width: 100%;
+        padding: 120px 0 170px 0;
+    }
+    &-title {
+        font-size: 30px;
+        font-family: 'Proxima Nova Bold', sans-serif;
+        font-weight: 500;
+    }
+    &__title {
+        margin-bottom: 45px;
+    }
+    &-text {
+        font-size: 30px;
+        font-family: 'Proxima Nova Bold', sans-serif;
+        font-weight: 600;
+    }
+    &__text {
+        margin-bottom: 68px;
+    }
+}
+
+// media-width
+@media (max-width:1180px) {}
+
+@media (max-width: 991px) {
+    .intro {
+        background: url('../../img/intro__bacground.jpg') 35% 0/cover no-repeat;
+    }
+}
+
+@media (max-width:767px) {
+    .intro {
+        background: url('../../img/intro__bacground.jpg') 25% 0/cover no-repeat;
+        &__title {
+            font-size: 24px;
+        }
+        &-text {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .intro {
+        background: url('../../img/intro__bacground.jpg') 0% 0/cover no-repeat;
+        &__wrapper {
+            margin: 0 auto;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 0 80px 0;
+        }
+        &__title {
+            margin-bottom: 25px;
+        }
+        &__text {
+            margin-bottom: 34px;
+        }
+    }
+}

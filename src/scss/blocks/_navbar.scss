@@ -1,0 +1,151 @@
+            .header {
+                position: relative;
+            }
+            
+            // NAVBAR
+            .navbar {
+                background-color: #ffffff;
+                top: 0;
+                left: 0;
+                position: fixed;
+                width: 100%;
+                z-index: 4;
+                &__wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    min-height: 85px;
+                }
+                &-btn {
+                    display: block;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background: transparent;
+                    width: 70px;
+                    height: 85px;
+                    border-left: 1px solid #ede6f8;
+                    border-right: 1px solid #ede6f8;
+                    &__line {
+                        display: block;
+                        width: 20px;
+                        height: 2px;
+                        background-color: $priority;
+                        margin-bottom: 3px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                &-logo {
+                    &__title {
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        font-family: 'Proxima Nova Bold', sans-serif;
+                        font-weight: 600;
+                        margin-bottom: 6px;
+                    }
+                    &__desc {
+                        font-size: 14px;
+                        color: $text-color-light;
+                    }
+                }
+                &-contacts {
+                    &__phone {
+                        display: block;
+                        font-size: 19px;
+                        font-family: 'Proxima Nova Bold', sans-serif;
+                        font-weight: 600;
+                        margin-bottom: 6px;
+                    }
+                    &__desc {
+                        display: block;
+                        font-size: 14px;
+                        text-align: right;
+                        color: $text-color-light;
+                    }
+                    &__wotk-time {}
+                    &__email {}
+                }
+            }
+            
+            // MENU
+            .menu {
+                opacity: 0;
+                transform: translateY(500%);
+                position: absolute;
+                width: 100%;
+                z-index: 1;
+                top: 0px;
+                left: 0;
+                background-color: $priority;
+                &:active {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+                &-list {
+                    padding: 20px 0;
+                    min-height: 50px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                &-item {
+                    &__link {
+                        font-size: 17px;
+                        text-transform: uppercase;
+                        color: #ffffff;
+                    }
+                }
+            }
+            
+            // media-width
+            @media (max-width:1180px) {
+                .menu {
+                    &-list {
+                        flex-wrap: wrap;
+                        gap: 10px 15px;
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+            
+            @media (max-width: 991px) {
+                .navbar {
+                    &-contacts {
+                        display: none;
+                    }
+                }
+            }
+            
+            @media (max-width:767px) {
+                .navbar {
+                    &-logo {
+                        &__title {
+                            font-size: 16px;
+                        }
+                    }
+                }
+                .menu {
+                    &-item {
+                        &__link {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            
+            @media (max-width: 576px) {
+                .menu {
+                    &-list {
+                        flex-direction: column;
+                    }
+                }
+                .navbar {
+                    &-logo {
+                        display: none;
+                    }
+                }
+            }
